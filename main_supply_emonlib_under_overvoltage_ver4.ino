@@ -148,7 +148,7 @@ vu = vzu /10;
 vv = vzu - 10*vu; 
 vtot = 0;
 
-lcd,setCursor(0,0);
+lcd.setCursor(0,0);
 lcd.print("U = ");
 lcd.print(vs);
 lcd.print(vu);
@@ -170,7 +170,7 @@ digitalWrite(sub, HIGH);
 digitalWrite(bun, LOW);
 digitalWrite(peste, LOW);
 digitalWrite(releu, LOW);
-lcd,setCursor(0,1);
+lcd.setCursor(0,1);
 lcd.print(" Undervoltage ! ");
 for (byte j=0; j < intarziere; j++){  
 if (digitalRead(meniu) == LOW) {
@@ -187,7 +187,7 @@ digitalWrite(sub, LOW);
 digitalWrite(bun, LOW);
 digitalWrite(peste, HIGH);
 digitalWrite(releu, LOW);
-lcd,setCursor(0,1);
+lcd.setCursor(0,1);
 lcd.print(" Overvoltage !  ");
 for (byte j=0; j < intarziere; j++){  
 if (digitalRead(meniu) == LOW) {
@@ -205,7 +205,7 @@ digitalWrite(sub, LOW);
 digitalWrite(bun, HIGH);
 digitalWrite(peste, LOW);
 digitalWrite(releu, HIGH);
-lcd,setCursor(0,1);
+lcd.setCursor(0,1);
 lcd.print(" Voltage is OK! ");
 for (byte j=0; j < intarziere2; j++){  
 if (digitalRead(meniu) == LOW) {
@@ -221,7 +221,7 @@ delay(1000);
 
 if (nivel == 1) {    // for change the value
 lcd.clear(); 
-lcd,setCursor(0,0);
+lcd.setCursor(0,0);
 lcd.print("Adjust values ! ");
 delay(2000);
 nivel = 2;
@@ -234,9 +234,9 @@ underzu = under - 100*unders;
 underz = underzu/10;
 underu = underzu - 10*underz;
 
-lcd,setCursor(0,0);
+lcd.setCursor(0,0);
 lcd.print("Minimum voltage:");
-lcd,setCursor(0,1);
+lcd.setCursor(0,1);
 lcd.print("     ");
 lcd.print(unders);
 lcd.print(underz);
@@ -271,9 +271,9 @@ overs = over / 100;
 overzu = over - 100*overs;
 overz = overzu/10;
 
-lcd,setCursor(0,0);
+lcd.setCursor(0,0);
 lcd.print("Maximum voltage:");
-lcd,setCursor(0,1);
+lcd.setCursor(0,1);
 lcd.print("     ");
 lcd.print(overs);
 lcd.print(overz);
@@ -309,7 +309,7 @@ intarziereu = intarziere - 10*intarzierez;
 
 lcd.setCursor(0,0);
 lcd.print("Delay on:");
-lcd,setCursor(0,1);
+lcd.setCursor(0,1);
 lcd.print("      ");
 lcd.print(intarzierez);
 lcd.print(intarzierez);
