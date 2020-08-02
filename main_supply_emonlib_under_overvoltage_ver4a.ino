@@ -17,7 +17,8 @@
 #include "EmonLib.h"             // Include Emon Library
 EnergyMonitor emon1;             // Create an instance
 #include <Wire.h> 
-#include <LiquidCrystal_I2C.h>
+#include <LiquidCrystal_I2C.h>   // https://github.com/tehniq3/used_library: https://github.com/tehniq3/used_library/tree/master/LiquidCrystal_I2C
+
 
 // Set the LCD address to 0x3F (or 0x27) for a 16 chars and 2 line display
 LiquidCrystal_I2C lcd(0x3F, 16, 2);
