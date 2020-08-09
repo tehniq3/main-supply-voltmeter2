@@ -6,7 +6,7 @@
 // ver.3b - display voltage with number after comma xxx.x
 // ver.3c - put U = xxx.x
 // ver.4 - add LCD1602 with i2c interface (31.7.2020)
-// VER.4a - change delay-on mode for good voltage (02.08.2020)
+// ver.4a - change delay-on mode for good voltage (02.08.2020)
 
 // EmonLibrary examples openenergymonitor.org, Licence GNU GPL V3
 // https://github.com/openenergymonitor/EmonLib
@@ -197,6 +197,7 @@ digitalWrite(peste, HIGH);
 digitalWrite(releu, LOW);
 lcd.setCursor(0,1);
 lcd.print(" Overvoltage !  ");
+timp = millis()/1000;  // store time
 /*
 for (byte j=0; j < intarziere; j++){  
 if (digitalRead(meniu) == LOW) {
