@@ -228,7 +228,7 @@ if (digitalRead(meniu) == LOW) {
 delay(1000);
 }
 */
-if (millis()/1000 - timp > intarziere)
+if (millis()/1000 - timp < intarziere)
 {
   digitalWrite(releu, LOW);
   lcd.setCursor(13,0);
