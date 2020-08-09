@@ -230,7 +230,7 @@ delay(1000);
 */
 if (millis()/1000 - timp > intarziere)
 {
-  digitalWrite(releu, HIGH);
+  digitalWrite(releu, LOW);
   lcd.setCursor(13,0);
   lcd.print(intarziere - millis() + timp);
   lcd.print("s");
